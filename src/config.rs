@@ -5,11 +5,11 @@ use config::ConfigError;
 pub struct ServerConfig {
     pub host: String,
     pub port: i32
-     
 }
 #[derive(Deserialize)]
 pub struct Config {
-     pub server: ServerConfig
+     pub server: ServerConfig,
+     pub pg: deadpool_postgres::Config,
 }
 
 impl Config {
